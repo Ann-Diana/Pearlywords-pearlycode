@@ -1,0 +1,239 @@
+html, body {
+  overflow: auto;
+}
+
+  /* website's background image */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("Globe_II.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+  /* navbar */
+nav {
+  background: rgb(35, 41, 41);
+  background: rgba(35, 41, 41, 0.6);
+  font-size: 105%;
+  border-bottom: 1px solid rgba(255, 204, 0, 0.5) !important;
+}
+
+.navbar-brand {
+  color: #FFCC00 !important;
+  font-size: 230%;
+}
+
+.navbar-brand2 {
+  font-size: 50%;
+  font-family: courier;
+  color: PaleTurquoise;
+}
+
+.navbar-toggler {
+  border-color: #FFCC00 !important;
+  background-color: rgb(35, 41, 41); /* Fallback if rgba isn't supported */
+  background-color: rgba(35, 41, 41, 0.7) !important;
+}
+
+  /* external links */
+.homelink,
+.link {
+  color: white;
+  text-decoration: underline;
+  font-size: 100%;
+}
+
+  /* highlight on mouseover */
+.homelink:hover,
+.link:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+  /* darker transparent box for better readability */
+.flex-container {
+  width: 400px;
+  max-width: 100%;
+  background-color: rgb(35, 41, 41);
+  background-color: rgba(35, 41, 41, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 50px;
+  color: PaleTurquoise;
+}
+
+  /* headings */
+h1 {
+  color: PaleTurquoise;
+  left: 0;
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+h2 {
+  color: PaleTurquoise;
+  left: 0;
+  font-size: 145%;
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+/* About me (image) */
+img[alt] {
+  border: 1px solid PaleTurquoise;
+  max-width: 240px;
+  height: auto;
+  border-radius: 20px;
+}
+
+  /* contact form */
+form {
+  color: PaleTurquoise;
+  font-weight: 500;
+  left: 0;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+li input,
+li textarea {
+  color: PaleTurquoise;
+  border-radius: 20px;
+  outline: none;
+  width: 280px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid PaleTurquoise;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  text-indent: 10pt;
+  box-shadow: none !important;
+}
+
+input:hover,
+textarea:hover {
+  border-color: PaleTurquoise;
+  border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+  border: 3px solid PaleTurquoise;
+  border-radius: 6px;
+}
+
+textarea {
+  height: 9em;
+  margin-bottom: 20px;
+}
+
+  /* fill-in instruction within fields */
+::placeholder {
+  color: white !important;
+  opacity: 1;
+}
+
+#language_button,
+#send_button {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: 1px solid PaleTurquoise;
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#language_button:hover,
+#send_button:hover {
+  border-color: PaleTurquoise;
+  border-radius: 7px;
+}
+
+#send_button {
+  margin-right: 140px;
+}
+
+  /* privacy policy checkbox */
+.form-check-input {
+  border-color: inherit;
+  margin-top: 7px;
+  opacity: 0.8;
+}
+
+.form-check-label {
+  font-size: 80%;
+}
+
+  /* form submit (non-)confirmation pages */
+#thanks, #unsuccessful {
+  color: PaleTurquoise;
+  border-radius: 20px;
+  outline: none;
+  width: 240px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid PaleTurquoise;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin-top: 60px;
+}
+
+  /* special area */
+#counter {
+  color: white;
+  border-radius: 20px;
+  /*outline: none;*/
+  width: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 8px;
+  margin-top: 10px;
+}
+
+#emailx {
+  visibility: collapse;
+  pointer-events: none;
+}
+
+.rem {
+  display: none;
+}
+
+  /* Print with visible URLs */
+@media print {
+  a[href]:after {
+    content: " <" attr(href) ">";
+  }
+}
+
+  /* Print in black font color */
+@media print {
+  html, body  {
+    color: #000;
+    background-color: #fff;
+    overflow: visible !important;
+  }
+}
+

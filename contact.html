@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Annette-Diana Majchrowicz">
+        <meta name="publisher" content="Annette-Diana Majchrowicz">
+        <meta name="copyright" content="Annette-Diana Majchrowicz"/>
+        <meta name="description" content="Translations and Programming">
+        <meta name="keywords" content="Translations, translator, expert, English, German, languages, transcreation, subtitling, voiceover, high-quality, professional, translator, state-certified, IHK, certified, Trados, coding, programmer, coder, developer, frontend, backend, accessible, website, websites, C, Python, SQL, HTML, CSS, JavaScript, jQuery, JS, CS50x, Chemnitz, Übersetzungen, Übersetzer, Fachtexte, Fachübersetzungen, Lokalisierung, Englisch, Deutsch, staatlich geprüft, barrierefrei, Webseite, Programmierung, Programmierer, Entwickler">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-maxlength/1.7.0/bootstrap-maxlength.min.js"></script>
+        <script src="store.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href="/favicon.ico" rel="icon">
+        <title>Pearlywords...pearlycode: Contact</title>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                const email = document.getElementById("entry.1884265043");
+                // <!-- Check correct e-mail format, otherwise inform user upon submit-->
+                email.addEventListener("input", function(){
+                  if (email.validity.typeMismatch){
+                    email.setCustomValidity("Please enter a valid e-mail address");
+                  } else {
+                    email.setCustomValidity("");
+                  }
+                });
+                // <!-- Show character counter  -->
+                $("textarea[id='entry.1933569']").maxlength({
+                alwaysShow: true,
+                warningClass: "label label-success",
+                limitReachedClass: "label label-danger",
+                validate: true,
+                appendToParent: true,
+                placement: "bottom-right-inside",
+                });
+
+                $("textarea[id='entry.1933569']").on("input", function() {
+                if ($(this).val().length>399) {
+                    alert("Maximum length reached");
+                  }
+                });
+
+
+                $("#emailx").css("display", "none");
+
+                $("input[id='entry.184040264']").on("input", function(){
+                  $("#counter").html(function(val){
+                    return val+1;
+                  });
+                });
+
+
+                $("form").submit(function(){
+                if ($("input[id='entry.184040264']").val().length != 0){
+                    window.location ="unsuccessful.html";
+                    return false;
+                }
+
+                else if ($("input[id='entry.1884265043']").val().match(/[:a-z].+\.\w\w.*|\@/)){
+                  window.location ="unsuccessful.html";
+                  return false;
+                }
+
+                else if ($("textarea[id='entry.1933569']").val().match(/[:a-z].+\.\w\w.*/)){
+                  alert("No URLs allowed in 'message' field");
+                  return false;
+                }
+
+                });
+            });
+
+        </script>
+
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" aria-label="brand name">Pearlywords
+        <p class="navbar-brand2">... pearlycode</p>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <!--<li class="nav-item">-->
+            <!--  <button type="button" id="language_button" style="opacity: 0.7; font-size: 75%"><span class="bi bi-globe"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-globe" viewBox="0 0 16 16">-->
+            <!--  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>-->
+            <!--  </svg> </span>Deutsch</button>-->
+            <!--</li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="translations.html">Translations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="programming.html">Programming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item active" aria-current="page">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+        <main class="container p-3">
+          <h1 class="left" style="padding-top: 50px">Drop me a line</h1>
+          <!--Credits to ThamaraHessel/Tony Perkins for "How to put forms which send emails on action into static sites without redirect" https://github.com/toperkin/staticFormEmails/blob/master/README.md-->
+          <form action="https://docs.google.com/forms/d/e/1FAIpQLSfDrVWw5YaFzRYh9DF87tsgnngaERH3TSyvvjjTOGNRUtCj7w/formResponse?usp=sf_link" enctype="text/plain" id="gform" target="hidden_iframe" onsubmit="submitted=true;">
+            <ul>
+              <li>
+                <input aria-label="enter your name" type="text" class="email_or_url" id="entry.1884265043" name="entry.1884265043" placeholder="Name*" autofocus required autocomplete="off">
+              </li>
+              <li id="emailx">
+                <input class="emailx" id="entry.184040264" name="entry.184040264" placeholder="xxx_mailto_xxx*" autocomplete="off" tabindex="-1">
+                <div id="counter">0</div>
+              </li>
+              <li>
+                <input aria-label="enter your e-mail" type="email" id="entry.1852426201" name="entry.1852426201" placeholder="E-mail*" required>
+              </li>
+              <li>
+                <textarea aria-label="enter your message: max 400 characters, no urls" id="entry.1933569" name="entry.1933569" placeholder="Message*" style="text-indent: 8pt" maxlength="400" required></textarea>
+                <iframe id="myIframe" style="display:none;"></iframe>
+              </li>
+            </ul>
+                <div class="form-check">
+                  <input aria-label="privacy policy read and agreed" type="checkbox" class="form-check-input" value="" id="flexCheckDefault" required>
+                  <label class="form-check-label" for="flexCheckDefault">I have read and agree with the</label>
+                  <a aria-label="privacy policy link" class="link" href="privacy_policy.html" target="_blank" title="GDPR" style="font-size: 80%">privacy policy</a>
+                </div>
+            <ul>
+              <li class="button">
+                <button aria-label="submit your message" type="submit" class="btn btn-primary" id="send_button">Send</button>
+                <label aria-label="legal notice link" class="imp" style="font-size: 90%"><a class="link" href="legal_notice.html" target="_blank">Legal notice</a></label>
+              </li>
+            </ul>
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
+        </main>
+    </body>
+</html>
